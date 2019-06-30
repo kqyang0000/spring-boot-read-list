@@ -1,10 +1,8 @@
 package com.imocc.springbootreadlist.secutity;
 
-import com.imocc.springbootreadlist.entity.Reader;
 import com.imocc.springbootreadlist.repository.ReaderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.domain.Example;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

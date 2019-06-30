@@ -1,10 +1,22 @@
 # close thymeleaf template cache default true
-spring.thymeleaf.cache=false
+spring:
+  thymeleaf:
+    cache: false
 # open implant server for HTTPS
 # first, use keytool tool of jdk make key store. eg: keytool -keystore mykeys.jks -genkey -alias tomcat -keyalg RAS.
 # maybe hint 'Warning: JKS 密钥库使用专用格式。建议使用 "keytool -importkeystore -srckeystore mykeys.jks -destkeystore
 # mykeys.jks -deststoretype pkcs12" 迁移到行业标准格式 PKCS12。', please ignore this, let`s continue.
-server.port=8443
-server.ssl.key-store=file:///Users/yangkaiqiang/Documents/java-workspace/mykeys.jks
-server.ssl.key-store-password=kqyang
-server.ssl.key-password=kqyang
+server:
+  port: 8443
+  ssl:
+    key-store: file:///Users/yangkaiqiang/Documents/java-workspace/mykeys.jks
+    key-store-password: kqyang
+    key-password: kqyang
+logging:
+  level:
+    root: warn
+    org.springframework.security: debug
+  path: /Users/yangkaiqiang/logs
+  file: spring-boot-read-list.log
+amazon:
+  associateId: kqyang0000
