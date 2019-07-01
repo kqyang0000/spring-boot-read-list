@@ -19,20 +19,20 @@ amazon:
   associateId: kqyang0000
 
 # use different properties for different environment, the public level is info.
-logging:
-  level:
-    root: info
-  path: /Users/yangkaiqiang/logs
-  file: spring-boot-read-list.log
+#logging:
+#  level:
+#    root: info
+#  path: /Users/yangkaiqiang/logs
+#  file: spring-boot-read-list.log
 ---
 # for development, the log will appear on console, and log level is debug.
-spring:
-  profiles:
-    active: development
-
-logging:
-  level:
-    root: debug
+#spring:
+#  profiles:
+#    active: development
+#
+#logging:
+#  level:
+#    root: debug
 ---
 # for production environment, the log will be write to logs file, and log level is warn
 spring:
