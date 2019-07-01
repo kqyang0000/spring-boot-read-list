@@ -4,7 +4,7 @@ spring:
     cache: false
 
 # open implant server for HTTPS
-# first, use keytool tool of jdk make key store. eg: keytool -keystore mykeys.jks -genkey -alias tomcat -keyalg RAS.
+# first, use keytool tool of jdk make key store. eg: keytool -keystore mykeys.jks -genkey -alias tomcat -keyalg RSA.
 # maybe hint 'Warning: JKS 密钥库使用专用格式。建议使用 "keytool -importkeystore -srckeystore mykeys.jks -destkeystore
 # mykeys.jks -deststoretype pkcs12" 迁移到行业标准格式 PKCS12。', please ignore this, let`s continue.
 server:
@@ -22,10 +22,13 @@ amazon:
 logging:
   level:
     root: info
+  path: /Users/yangkaiqiang/logs
+  file: spring-boot-read-list.log
 ---
 # for development, the log will appear on console, and log level is debug.
 spring:
-  profiles: development
+  profiles:
+    active: development
 
 logging:
   level:
@@ -33,8 +36,10 @@ logging:
 ---
 # for production environment, the log will be write to logs file, and log level is warn
 spring:
-  profiles: production
+  profiles:
+    active: production
 
 logging:
   level:
     root: warn
+    org.springframework.security: debug
