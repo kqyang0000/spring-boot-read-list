@@ -17,7 +17,6 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-@ConfigurationProperties(prefix = "amazon")
 public class ReadingListController {
     private static final Logger logger = LoggerFactory.getLogger(ReadingListController.class);
 
